@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { Bot, User } from '@lucide/vue';
 import { StreamMarkdown } from 'streamdown-vue';
-import { markRaw } from 'vue';
-import ChatCodeBlock from '@/components/chat/ChatCodeBlock.vue';
 import type { Conversation } from '@/types';
 
 defineProps<{
@@ -10,8 +8,9 @@ defineProps<{
     isStreaming: boolean;
 }>();
 
-const markdownComponents = {
-    codeblock: markRaw(ChatCodeBlock),
+const shikiTheme = {
+    light: 'github-light',
+    dark: 'github-dark',
 };
 </script>
 
@@ -69,10 +68,9 @@ const markdownComponents = {
                     <StreamMarkdown
                         v-else
                         :content="message.content"
-                        :components="markdownComponents"
                         class="streamdown-chat w-full max-w-none text-[15px] leading-7 text-zinc-800 dark:text-zinc-100"
                         :code-block-hide-download="true"
-                        shiki-theme="github-dark"
+                        :shiki-theme="shikiTheme"
                     />
                     <!-- Plain assistant renderer, no Streamdown:
                     <div

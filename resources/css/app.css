@@ -182,27 +182,7 @@
 }
 
 .streamdown-chat [data-streamdown='code-block'],
-.streamdown-chat [data-streamdown='code-body'],
-.streamdown-chat [data-streamdown='pre'] {
-    max-width: 100%;
-    width: 100%;
-}
-
 .streamdown-chat [data-streamdown='code-body'] {
-    padding: 0 !important;
-}
-
-.streamdown-chat [data-streamdown='code-body'] pre {
-    background: transparent !important;
-    border: 0;
-    line-height: 1.75rem;
-    margin: 0;
     max-width: 100%;
-    padding: 1rem;
     width: 100%;
-}
-
-.streamdown-chat .chat-code-highlight code {
-    background: transparent;
-    padding: 0;
 }

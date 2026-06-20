@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link, router } from '@inertiajs/vue3';
-import { LogOut, MessageSquare, Pencil, Plus, Trash2 } from '@lucide/vue';
+import { LogOut, MessageSquare, Pencil, Trash2 } from '@lucide/vue';
 import {
     Sidebar,
     SidebarContent,
@@ -45,11 +45,6 @@ const deleteChat = (chat: Chat) => {
                             <span class="font-semibold">ChatGPT</span>
                         </Link>
                     </SidebarMenuButton>
-                    <SidebarMenuAction as-child>
-                        <Link href="/chat" aria-label="New chat">
-                            <Plus />
-                        </Link>
-                    </SidebarMenuAction>
                 </SidebarMenuItem>
             </SidebarMenu>
         </SidebarHeader>
